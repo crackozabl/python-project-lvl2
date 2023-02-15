@@ -60,7 +60,6 @@ def _format_value(value, prefix):
         result = ['{']
 
         for k,v in value.items():
-            print(f'{k=}, {v=}')
             result.append(f'{prefix}{INDENT_SPACE}{k}: {_format_value(v, prefix + INDENT_SPACE)}')
 
         result.append(f'{prefix}}}')
