@@ -14,7 +14,7 @@ test:
 	poetry run pytest ./tests/
 
 test-coverage:
-	poetry run pytest --cov ./tests/
+	poetry run pytest --cov --cov-report=xml ./tests/
 
 lint:
 	poetry run flake8
