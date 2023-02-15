@@ -22,7 +22,7 @@ def parse_content(content, file_type):
         return yaml.load(content, Loader=yaml.Loader)
 
 
-def generate_diff(path1, path2, format_='json'):
+def generate_diff(path1, path2, format_='stylish'):
     content1 = load_content(path1)
     content2 = load_content(path2)
     type1 = get_format(path1)
