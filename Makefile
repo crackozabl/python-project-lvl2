@@ -22,3 +22,5 @@ lint:
 
 check: test lint
 
+install:
+	poetry install
