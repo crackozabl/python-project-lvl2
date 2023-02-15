@@ -22,7 +22,7 @@ def main():
 
     parser.add_argument('first_file', type=str)
     parser.add_argument('second_file', type=str)
-    parser.add_argument('--format', metavar='', type=str, default='stylish')
+    parser.add_argument('-f', '--format', metavar='', type=str, default='stylish')
 
     args = parser.parse_args()
     print(generate_diff(args.first_file, args.second_file, args.format))
