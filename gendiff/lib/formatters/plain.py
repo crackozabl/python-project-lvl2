@@ -20,7 +20,7 @@ def _format(diff, prefix=''):
             formatted_value = _format_value(diff[key]['value'])
             result.append(
                 f'Property {path} was added with value: '
-                f'{formatted_value}.')
+                f'{formatted_value}')
 
         elif status == 'REMOVED':
             result.append(
