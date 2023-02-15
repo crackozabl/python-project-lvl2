@@ -16,7 +16,7 @@ def _format(diff, prefix=''):
     for key in diff.keys():
         result.append(_format_node(key, diff[key], prefix))
 
-    return '\n'.join(result)
+    return os.linesep.join(result)
 
 
 def _format_node(key, node, prefix):
@@ -57,17 +57,18 @@ def _format_node(key, node, prefix):
 
 
 def _format_value(value, prefix):
+
     if isinstance(value, dict):
         result = ['{']
 
-        for k, v in value.items():
-            prefix_space = f'{prefix + INDENT_SPACE}'
+        for key, value in value.items():
+            prefix_space = f'{prefix}{INDENT_SPACE}'
+            formatted_key_value = _format_value(value, prefix_space)
             result.append(
-                f'{prefix}{INDENT_SPACE}{k}: {_format_value(v, prefix_space)}')
+                f'{prefix_space}{key}: {formatted_key_value}')
 
         result.append(f'{prefix}}}')
-        return '\n'.join(result)
-        # return '[complex value]'
+        return os.linesep.join(result)
     if isinstance(value, bool):
         return str(value).lower()
     if value is None:
