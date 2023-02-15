@@ -9,6 +9,7 @@ test_simple:
 
 test_nested:
 	poetry run gendiff ./tests/fixtures/file_nested1.$(FILE_FORMAT) ./tests/fixtures/file_nested2.$(FILE_FORMAT) --format $(FORMAT) > ./tests/fixtures/diff_$(FILE_FORMAT)_$(FORMAT).fixture
+	cat ./tests/fixtures/diff_$(FILE_FORMAT)_$(FORMAT).fixture
 
 test:
 	poetry run pytest ./tests/
