@@ -1,4 +1,3 @@
-
 FORMAT=stylish
 FILE_FORMAT=json
 
@@ -18,7 +17,7 @@ test-coverage:
 	poetry run pytest --cov ./tests/
 
 lint:
-	flake8
+	poetry run flake8
 
 check: test lint
 
