@@ -76,5 +76,4 @@ def _build_status(key, data1, data2):
         return {'status': 'REMOVED', 'value': data1[key]}
 
     elif key in data2.keys():
-
         return {'status': 'ADDED', 'value': data2[key]}

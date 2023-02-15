@@ -3,11 +3,6 @@ import gendiff
 
 
 @pytest.fixture()
-def file1():
-    return ""
-
-
-@pytest.fixture()
 def path1():
     return "tests/fixtures/file_nested1.yml"
 

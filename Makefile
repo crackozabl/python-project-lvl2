@@ -1,6 +1,10 @@
 
 FORMAT=stylish
 FILE_FORMAT=json
+
+
+.PHONY=check
+
 test_simple:
 	poetry run gendiff ./tests/fixtures/file1.$(FILE_FORMAT) ./tests/fixtures/file2.$(FILE_FORMAT) --format $(FORMAT)
 
@@ -10,5 +14,11 @@ test_nested:
 test:
 	poetry run pytest ./tests/
 
+test-coverage:
+	poetry run pytest --cov ./tests/
+
 lint:
 	flake8
+
+check: test lint
+
