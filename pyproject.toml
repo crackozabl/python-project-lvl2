@@ -2,7 +2,8 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "Small utility to diff config files"
-authors = ["Anton Olenev <a_olenev@mail.ru>"]
+repository = "https://github.com/crackozabl/python-project-lvl2"
+authors = ["Anton <no-reply@github.com>"]
 packages = [
   { include = "gendiff" },
 ]

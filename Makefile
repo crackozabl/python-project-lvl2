@@ -20,7 +20,13 @@ test-coverage:
 lint:
 	poetry run flake8
 
+build:
+	poetry build
+
 check: test lint
 
 install:
 	poetry install
+
+install-gendiff:
+	pip install ./dist/hexlet_code-0.1.0-py3-none-any.whl

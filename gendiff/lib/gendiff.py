@@ -1,9 +1,23 @@
 import json
 import yaml
 import os
-from .formatters import json as json_formatter,\
+import argparse
+from gendiff.lib.formatters import json as json_formatter,\
     plain, stylish
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='Compares two configuration files and shows a difference.')
+
+    parser.add_argument('first_file', type=str)
+    parser.add_argument('second_file', type=str)
+    parser.add_argument('-f', '--format',
+                        type=str,
+                        default='stylish',
+                        choices=['json','stylish','plain'])
+
+    args = parser.parse_args()
+    return args
 
 def load_content(path):
     with open(path) as file:

@@ -17,11 +17,6 @@ def get_fixture_content(name):
         return f.read()
 
 
-@pytest.fixture()
-def diff_simple_stylish():
-    return get_fixture_content('diff_file1_json_file2_json_stylish')
-
-
 @pytest.mark.parametrize(
     'path1, path2, format_, diff_fixture',
     [
