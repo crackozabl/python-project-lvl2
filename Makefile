@@ -29,4 +29,4 @@ install:
 	poetry install
 
 install-gendiff:
-	pip install ./dist/hexlet_code-0.1.0-py3-none-any.whl
+	pip install --force-reinstall ./dist/hexlet_code-0.1.0-py3-none-any.whl

@@ -2,8 +2,9 @@ import json
 import yaml
 import os
 import argparse
-from gendiff.lib.formatters import json as json_formatter,\
-    plain, stylish
+from gendiff.lib.formatters import \
+    json as json_formatter, plain, stylish
+
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -14,10 +15,11 @@ def parse_args():
     parser.add_argument('-f', '--format',
                         type=str,
                         default='stylish',
-                        choices=['json','stylish','plain'])
+                        choices=['json', 'stylish', 'plain'])
 
     args = parser.parse_args()
     return args
+
 
 def load_content(path):
     with open(path) as file:

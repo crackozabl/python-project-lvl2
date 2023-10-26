@@ -12,7 +12,6 @@
       -h, --help            show this help message and exit
 """
 
-import argparse
 from gendiff import generate_diff, parse_args
 
 
